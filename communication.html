@@ -10,7 +10,26 @@
 <body>
     <div class="include" include-html="./components/navbar.html" include-css = "./components/navbar.css"></div>
 
-    <div style="height: 300vh; margin-top: 206px;">aa</div>
+    <form action="" method="post" class="d-flex flex-column">
+        <br>
+        <label for="isim">İsim:</label>
+        <br>
+        <input type="text" name="isim" id="name">
+        <br>
+        <br>
+        <label for="email">E-Mail:</label>
+        <br>
+        <input type="email" name="email" id="email">
+        <br>
+        <br>
+        <label for="message">Mesaj:</label>
+        <br>
+        <input type="text" name="message" id="message">
+        <br>
+        <br>
+        <input type="submit" value="Mesajı Gönder!">
+        <br>
+    </form>
 
     
     <script src="./components/includeHtml.js"></script>

@@ -87,13 +87,22 @@ div.carousel::after {
 /* about.html spesific css */
 
 .about-second>.card {
-    width: 30% !important; 
-    height:300px;
+    width: 360px !important; 
+    height:360px;
     margin: 10px;
 }
-.mybox>{
-    
-}
+
 .about-third>.card {
     width: 10%
+}
+
+/* communication.html spesific css */
+
+form > input {
+    width: 200px;
+}
+
+#message {
+    width: 400px;
+    height: 119.975px;
 }
