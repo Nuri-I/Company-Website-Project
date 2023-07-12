@@ -28,7 +28,9 @@ div.carousel::after {
     min-width: 100vw;
     object-fit: cover;
 }
-
+.SmallSectionMiddle> {
+    overflow: visible!important;
+}
 .hr {
     display: inline-block;
     align-self: stretch;
@@ -81,3 +83,17 @@ div.carousel::after {
 @media only screen and (max-width:996px) {}
 
 @media only screen and (max-width:451px) {}
+
+/* about.html spesific css */
+
+.about-second>.card {
+    width: 30% !important; 
+    height:300px;
+    margin: 10px;
+}
+.mybox>{
+    
+}
+.about-third>.card {
+    width: 10%
+}
