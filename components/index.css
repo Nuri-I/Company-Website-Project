@@ -5,6 +5,10 @@
 a{
     text-decoration: none !important;
 }
+
+.hide-outside-mobile{
+    display: none !important;
+}
 /*Anasayfa Css*/
 div.carousel::after {
     content: "";
@@ -29,7 +33,7 @@ div.carousel::after {
     min-width: 100vw;
     object-fit: cover;
 }
-.SmallSectionMiddle> {
+.SmallSectionMiddle {
     overflow: visible!important;
 }
 .hr {
@@ -81,15 +85,50 @@ div.carousel::after {
     color: white !important;
  }
 
-@media only screen and (max-width:996px) {}
+@media only screen and (max-width:996px) {
 
-@media only screen and (max-width:451px) {}
+}
+
+@media only screen and (max-width:656px) {
+    .hide-on-mobile{
+        display: none !important;
+    }
+    .col-on-mobile {
+        flex-direction: column !important;
+    }
+    .full-on-mobile {
+        width: 100% !important;
+    }
+    .hide-outside-mobile {
+        display: inherit !important;
+    }
+    .SmallSectionMiddle {
+        width: 100%;
+    }
+    .move-right-on-mobile {
+        margin-left:1000px !important;
+    }
+    .about-second {
+        margin-left: 0 !important;
+        margin-top: 10px !important;
+        width: calc(100vw - 20px) !important;        
+        height: 700px !important;
+    }
+    .about-second>.card{
+        width: calc(100vw - 20px) !important;
+        height: 400px !important;
+
+    }
+}
 
 /* about.html spesific css */
-
+.about-second {
+    overflow: visible;
+}
 .about-second>.card {
-    width: 360px !important; 
+    width: 360px; 
     height:360px;
+    width: 100%;
     margin: 10px;
 }
 

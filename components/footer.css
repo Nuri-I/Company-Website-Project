@@ -8,3 +8,6 @@
 #footer>i, #footer>span {
     margin-bottom: 30px;
 }
+#footer-left>div {
+    margin-top: 20px;
+}
