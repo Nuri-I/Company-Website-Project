@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,24 +10,22 @@
 <body>
     <div class="include" include-html="./components/navbar.html" include-css = "./components/navbar.css"></div>
 
-    <form action="" method="post" class="d-flex flex-column">
+    <div class="com d-flex justify-content-center align-items-center" >
+        <div><h1 style="font-size: 100px;">İletişim</h1></div>
+    </div>
+    <form action="" method="post" class="d-flex flex-column" style="margin-left: 100px;">
         <br>
-        <label for="isim">İsim:</label>
+        <div class="d-flex flex-row justify-content-between" style="max-width: 500px; width: 70%;">
+        <input type="text" name="isim" id="name" placeholder="İsminiz">
+        <input type="email" name="email" id="email" placeholder="E-Mail">
+        <input type="text" name="subject" id="subject" placeholder="Konu">
+        <br> 
+        </div>
         <br>
-        <input type="text" name="isim" id="name">
-        <br>
-        <br>
-        <label for="email">E-Mail:</label>
-        <br>
-        <input type="email" name="email" id="email">
-        <br>
-        <br>
-        <label for="message">Mesaj:</label>
-        <br>
-        <input type="text" name="message" id="message">
+        <textarea type="text" name="message" id="message" placeholder="Mesajınız" style="max-width: 500px; width: 70%;"></textarea>
         <br>
         <br>
-        <input type="submit" value="Mesajı Gönder!">
+        <input type="submit" value="Mesajı Gönder!" style="width: 150px;">
         <br>
     </form>
 
