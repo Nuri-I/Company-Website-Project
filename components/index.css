@@ -121,7 +121,7 @@ div.carousel::after {
     }
     .w-80-on-mobile {
         width: 80% !important;
-        margin-left: 10px !important;
+        margin-left: 4% !important;
     }
 }
 
