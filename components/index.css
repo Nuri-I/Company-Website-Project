@@ -119,6 +119,9 @@ div.carousel::after {
         height: 400px !important;
 
     }
+    .w-80-on-mobile {
+        width: 80% !important;
+    }
 }
 
 /* about.html spesific css */
