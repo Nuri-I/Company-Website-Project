@@ -5,7 +5,15 @@
 a{
     text-decoration: none !important;
 }
-
+.hr {
+    display: inline-block;
+    align-self: stretch;
+    margin-left: 5%;
+    min-width: 90%;
+    height: 1px;
+    background-color: black;
+    opacity: 0.25;
+}
 .hide-outside-mobile{
     display: none !important;
 }
@@ -36,23 +44,16 @@ div.carousel::after {
 .SmallSectionMiddle {
     overflow: visible!important;
 }
-.hr {
-    display: inline-block;
-    align-self: stretch;
-    margin-left: 5%;
-    min-width: 90%;
-    height: 1px;
-    background-color: black;
-    opacity: 0.25;
+.SmallSectionMiddle>*{
+    width: 20%;
 }
 
 .red-section{
     display: flex;
     justify-content: space-between;
-}
-.red-section {
     margin-bottom: 30px;
 }
+
 .red-section>img{
     width: 290px;
 }
@@ -142,12 +143,22 @@ div.carousel::after {
 
 /* communication.html spesific css */
 
-form>input {
-    width: 200px;
+.form-adjustments{
+    margin-left: 100px;
+    margin-right:100px;
+    max-width: 600px;
+    width: auto
+}
+.form-adjustments>* {
+    max-width: 600px;
+    width: auto
+}
+.form-adjustments>*>#subject{
+
+    width: 600px;
 }
 
 #message {
-    width:500px;
     height: 119.975px;
 }
 .com {
