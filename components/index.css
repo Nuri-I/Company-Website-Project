@@ -1,6 +1,6 @@
 * {
     overflow-x: clip;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
 }
 a{
     text-decoration: none !important;
@@ -87,10 +87,22 @@ div.carousel::after {
  }
 
 @media only screen and (max-width:996px) {
-
+    .col-on-tablet{
+        flex-direction: column !important;
+    }
+    .hide-outside-tablet {
+        display: inherit !important;
+    }
+    .hide-on-tablet{
+        display: none !important;
+    }
+    .w-90-on-tablet {
+        width: 90% !important;
+        margin-left: 4% !important;
+    }
 }
 
-@media only screen and (max-width:656px) {
+@media only screen and (max-width:665px) {
     .hide-on-mobile{
         display: none !important;
     }
@@ -120,8 +132,8 @@ div.carousel::after {
         height: 400px !important;
 
     }
-    .w-80-on-mobile {
-        width: 80% !important;
+    .w-90-on-mobile {
+        width: 90% !important;
         margin-left: 4% !important;
     }
 }
@@ -129,6 +141,7 @@ div.carousel::after {
 /* about.html spesific css */
 .about-second {
     overflow: visible;
+    margin-bottom: 20px;
 }
 .about-second>.card {
     width: 360px; 
@@ -143,14 +156,21 @@ div.carousel::after {
 
 /* communication.html spesific css */
 
+#send-message{
+    width: 150px;
+    align-self: baseline;
+    border: none;
+    background-color: grey;
+    color: white;
+
+}
+
 .form-adjustments{
     margin-left: 100px;
     margin-right:100px;
-    max-width: 600px;
     width: auto
 }
 .form-adjustments>* {
-    max-width: 600px;
     width: auto
 }
 .form-adjustments>*>#subject{
