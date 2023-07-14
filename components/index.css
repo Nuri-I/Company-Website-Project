@@ -14,7 +14,7 @@ a{
     background-color: black;
     opacity: 0.25;
 }
-.hide-outside-mobile{
+.hide-outside-mobile, .hide-outside-tablet{
     display: none !important;
 }
 /*Anasayfa Css*/
@@ -167,7 +167,7 @@ div.carousel::after {
 
 .form-adjustments{
     margin-left: 100px;
-    margin-right:100px;
+    margin-right:600px;
     width: auto
 }
 .form-adjustments>* {
@@ -209,4 +209,33 @@ div.carousel::after {
         height: 400px;
         top:56px;
     }
+}
+
+/*Product bölümü*/
+
+
+article.card{
+    width: 48%;
+}
+
+#product-page {
+    width: fit-content;
+
+}
+
+#product-page>* {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#product-body>.vr{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#product-page>section {
+    justify-content: space-between !important;
+    height: 600px;
+
+}
+#product-page>section>.card{
+    height: 550px;
 }
