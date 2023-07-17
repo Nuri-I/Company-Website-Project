@@ -11,18 +11,16 @@
     <div class="include" include-html="./components/navbar.html" include-css = "./components/navbar.css"></div>
 
     <div class="about-first d-flex style width: 100%; height: 40vh">
-        <div class="red-text-area d-flex flex-column justify-content-end full-on-mobile" style="width:50%; height: 40vh;">
-            <div>
+        <section class="red-text-area d-flex flex-column justify-content-end full-on-mobile" style="width:50%; height: 40vh;">
             <h1 style="margin-top:  20px;">1900 yılından beri bu işteyiz (placeholder, değiştir)</h1>
             <br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis odit blanditiis minima modi, fugit quaerat incidunt molestias voluptate tenetur beatae accusantium consequuntur adipisci sit deleniti dignissimos, consequatur repellendus, laborum hic.lorem</p>
-            </div>    
-        </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis odit blanditiis minima modi, fugit quaerat incidunt molestias voluptate tenetur beatae accusantium consequuntur adipisci sit deleniti dignissimos, consequatur repellendus, laborum hic.lorem</p>   
+        </section>
         <img src="./components/images/LargePlaceholder.png" alt="" class ="hide-on-mobile" style= "width: 50vw; height: 40vh; flex-wrap: wrap; object-fit: cover;"> 
     </div>
 
-    <div class="about-second d-flex justify-content-evenly col-on-mobile" style="flex-direction: row; width: 80%; height: 40vh; margin-left: 10%;margin-top:40px;">
-            <div class="overflow-visible text-center card" >
+    <div class="about-second d-flex justify-content-evenly col-on-tablet" style="flex-direction: row; width: 80%; height: 40vh; margin-left: 10%;margin-top:40px;">
+            <div class="overflow-visible text-center card " >
                 <div class="card-body">
             <h1 class = "card-title">Vizyonumuz</h1>
             <i class="hr"></i>
@@ -87,9 +85,12 @@
     <br>
     <div class="include" include-html="./components/footer.html" include-css = "./components/footer.css"></div>
 
-    <script src="./components/includeHtml.js"></script>
-    <script>includeHTML();</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script src="./components/main.js"></script>
+    <script>includeHTML(); </script>
 
 
 

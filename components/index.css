@@ -18,7 +18,7 @@ a{
     display: none !important;
 }
 /*Anasayfa Css*/
-div.carousel::after {
+.carousel::after {
     content: "";
     left: 0;
     top: 0;
@@ -100,6 +100,20 @@ div.carousel::after {
         width: 90% !important;
         margin-left: 4% !important;
     }
+    .map-tablet {
+        height: 500px;
+    }
+    .about-second {
+        /* margin-left: !important; */
+        margin-top: 10px !important;
+        width: calc(100vw - 20px) !important;        
+        height: 700px !important;
+    }
+    .about-second>.card{
+        width: 75% !important;
+        height: 400px !important;
+
+    }
 }
 
 @media only screen and (max-width:665px) {
@@ -121,17 +135,7 @@ div.carousel::after {
     .move-right-on-mobile {
         margin-left:1000px !important;
     }
-    .about-second {
-        margin-left: 0 !important;
-        margin-top: 10px !important;
-        width: calc(100vw - 20px) !important;        
-        height: 700px !important;
-    }
-    .about-second>.card{
-        width: calc(100vw - 20px) !important;
-        height: 400px !important;
 
-    }
     .w-90-on-mobile {
         width: 90% !important;
         margin-left: 4% !important;
@@ -167,7 +171,8 @@ div.carousel::after {
 
 .form-adjustments{
     margin-left: 100px;
-    margin-right:600px;
+    margin-right:100px;
+    max-width: 1126px;
     width: auto
 }
 .form-adjustments>* {
@@ -214,9 +219,6 @@ div.carousel::after {
 /*Product bölümü*/
 
 
-article.card{
-    width: 48%;
-}
 
 #product-page {
     width: fit-content;
@@ -224,8 +226,10 @@ article.card{
 }
 
 #product-page>* {
+    margin: 20px 20px 20px 20px;
     margin-left: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 #product-body>.vr{
     margin-top: 40px;
@@ -233,9 +237,9 @@ article.card{
 }
 #product-page>section {
     justify-content: space-between !important;
-    height: 600px;
+    padding: 5px;
 
 }
 #product-page>section>.card{
-    height: 550px;
+    width: 48%;
 }

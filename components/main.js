@@ -1,6 +1,40 @@
 
 
+
+
+var form = document.querySelector("form")
+let submit = document.querySelector('#send-message');
+submit.addEventListener('click', e =>{
+    e.preventDefault();
+    let message = form.querySelector('#message').value;
+    let subject = form.querySelector('#subject').value;
+    let email = form.querySelector('#email').value;
+    let name = form.querySelector('#name').value
+
+
+    console.log(message);
+    console.log(name);
+    console.log(email);
+    console.log(subject);
+
+    axios ({
+        method: "post",
+        url: "http://localhost:8080/admin-panel-project/components/backend/submitForm.php",
+        data: {
+            'name': name,
+            'email': email,
+            'subject': subject,
+            'message': message
+        } }) .then(response => {
+            console.log(response);
+        })
+    
+})
+
+
 var xhttp = new XMLHttpRequest();
+
+
 function includeHTML() {
   var xhttp = new XMLHttpRequest();
   var z = document.getElementsByClassName("include");
@@ -31,7 +65,7 @@ function includeHTML() {
   }
 }
 
-function renderAll() {
+function renderSiteVars() {
   var site_mails = document.getElementsByClassName("insert-main-email");
   var site_phones = document.getElementsByClassName("insert-main-phone");
   var site_adresses = document.getElementsByClassName("insert-main-adress");
@@ -41,12 +75,10 @@ function renderAll() {
   })
     .then(response => {
       for (var i = 0; i < site_mails.length;) {
-        console.log(site_mails);
         var element = site_mails[i]
         element.innerHTML = response.data.email
         element.classList.remove("insert-main-email")
         for (var i = 0; i < site_phones.length;) {
-          console.log(site_phones)
           var element = site_phones[i];
           element.innerHTML = response.data.phone;
           element.classList.remove("insert-main-phone")
@@ -60,6 +92,19 @@ function renderAll() {
     })
 }
 
+var loaded = false 
+window.addEventListener('scroll', function(){
+  
+  var element = document.querySelector("footer")
+  var position = element.getBoundingClientRect();
+  
+  if (position.bottom && loaded == false){
+    renderSiteVars();
+    loaded = true;
+  }
+})
+
+
 function renderProducts() {
   var element =   document.getElementById("product-page");
   axios({
@@ -69,14 +114,11 @@ function renderProducts() {
   .then (response => {
     var products = response.data;
     for (let k = 0; k < products.length/2; k++) {
-    element.innerHTML += "<section class= 'd-flex col-on-mobile product_row w-90-on-mobile' style ='flex-direction: row;'></section>"
+    element.innerHTML += "<div class= 'd-flex col-on-mobile product_row w-90-on-mobile' style ='flex-direction: row;'></div>"
     var insert = document.getElementsByClassName("product_row")
 
      for (let i = 0; i < (products.length-2*k < 2 ? products.length-2*k : 2); i++) {
       var a = k*2+i
-      console.log("K = " +k)
-      console.log("A = " + a)
-      console.log("i = "+ i )
       insert[k].innerHTML += products[a]
       
     }

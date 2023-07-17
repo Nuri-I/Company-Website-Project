@@ -13,7 +13,8 @@ for ($i=0; $i < $row_count; $i++) {
     $url = $stored["product_image_url"];
     $name = $stored["product_name"];
     $desc = $stored["product_description"];
-    array_push($output, " <article class='card w-90-on-mobile'>
+    array_push($output, " 
+    <article class='card w-90-on-mobile'>
     <img class='card-img-top' src='$url' alt='$name'>
     <div class='card-body'>
       <h4 class='card-title'>$name</h4>

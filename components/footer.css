@@ -5,9 +5,9 @@
     color:white;
     width:100%    
 }
-#footer>i, #footer>span {
+#footer>i, #footer>p {
     margin-bottom: 30px;
 }
-#footer-left>div {
+#footer-left>figure {
     margin-top: 20px;
 }
