@@ -8,14 +8,14 @@ $search = $mysqli -> query("SELECT * FROM product_stats");
 
 $output = array();
 for ($i=0; $i < $row_count; $i++) { 
-    # code...
     $stored = $search -> fetch_assoc();
+    $id = strval($stored["product_id"]);
     $url = $stored["product_image_url"];
     $name = $stored["product_name"];
     $desc = $stored["product_description"];
     array_push($output, " 
     <article class='card w-90-on-mobile'>
-    <img class='card-img-top' src='$url' alt='$name'>
+    <img class='card-img-top' src='$url' alt='$name' id='$id'>
     <div class='card-body'>
       <h4 class='card-title'>$name</h4>
       <p class='card-text'>$desc</p>
