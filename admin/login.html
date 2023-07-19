@@ -6,15 +6,18 @@
     <title>Admin Login</title>
 </head>
 <body style="background-color: skyblue; color: rgb(80, 78, 78);">
-    <div style=" height: 100%; width: 100%; display:flex; position:absolute; align-items: center; justify-content: center;">
-        <form>
+    <div style=" height: 100%; width: 100%; display:flex; position:absolute; align-items: center; justify-content: center; flex-direction: column;">
+        <form style="display: flex; flex-direction: row;">
             <label for="username">Kullanıcı Adı:</label>
             <input type="text" name="username" id="username">
             <label for="passowrd">Şifre:</label>
             <input type="text" name="password" id="password">
             <input type="submit" value="gönder" id="submit">
         </form>
-    
+        <div style="border: 2px solid #721d1d; background: #db5555; border-radius: 10px; width: 400px; height: 50px; display:flex; align-items: center;">
+            <strong style="margin-left: 10px;">Lol</strong>
+        </div>
+        
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="adminmain.js"></script>

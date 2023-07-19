@@ -44,12 +44,11 @@ DROP TABLE  company_website.product_bools;
     
 DROP TABLE company_website.users;
 
-SELECT * FROM users;    
+SELECT * FROM company_website.users;    
 
 TRUNCATE TABLE company_website.usermessages;
 
-SELECT product_id, product_image_url, product_name, product_description FROM company_website.product_stats JOIN company_website.product_bools ON company_website.product_bools.product_id = company_website.product_stats.product_id WHERE red = 1;
-INSERT INTO company_website.users (id, username, pass, permission)
+SELECT 'product_id', product_image_url, product_name, product_description FROM company_website.product_stats JOIN company_website.product_bools ON company_website.product_bools.product_id = company_website.product_stats.product_id WHERE red = 1;INSERT INTO company_website.users (id, username, pass, permission)
 VALUES (1,"admin", '$2y$10$BbgVXNm3mn3eHkMFLQKyGe5JcLSV72iIOL7cIq1iYu1rUlZi2M2Jy', 1);
     
 INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
