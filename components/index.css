@@ -216,7 +216,7 @@ a{
     }
 }
 
-/*Product bölümü*/
+/*Product.html*/
 
 
 
@@ -235,11 +235,26 @@ a{
     margin-top: 40px;
     margin-bottom: 40px;
 }
-#product-page>section {
+#product-page>.product_row {
     justify-content: space-between !important;
-    padding: 5px;
-
+    padding: 0px;
+    margin-left: 1em;
 }
-#product-page>section>.card{
+#product-page>.product_row >.card{
     width: 48%;
+}
+
+#choose-list {
+    width: 8em;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+#choose-list>* {
+    margin-top: 5px;
+    color: black;
+    font-weight: 600;
+    transition: color .5s ease;
+}
+#choose-list>a:hover {
+    color: #d13c3c;
 }
