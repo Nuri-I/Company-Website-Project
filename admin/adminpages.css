@@ -26,3 +26,33 @@ ul>li>a {
     color: black;
     font-weight: 600;
 }
+th{
+    border: 1px solid darkslategray;
+    background: skyblue;
+}
+td {
+    text-align: center;
+    border: 1px solid darkslategray;
+}
+
+section.table-wrapper {
+    height: 60vh;
+    overflow-y: scroll;
+    border: 2px black solid;
+}
+
+
+.edit-table>form {
+    display: flex;
+    flex-direction: row;
+}
+.edit-table>form>* {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+}
+
+#preview_image {
+    width: 300px;
+    height: 200px;
+}

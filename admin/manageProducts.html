@@ -16,11 +16,39 @@
     </ul>
 </nav>
 
+<section class="table-wrapper">
 <table></table>
+</section>
+<section class = "edit-table">
+    <form>
+        <div>
+            <label for="product_id">Ürün No:</label>
+            <input type="text" name="product_id" id="product_id" disabled aria-disabled="true">
+        </div>
+        <div>
+        <label for="product_name"> Ürün Adı:</label>
+        <input type="text" name="product_name" id="product_name"  autocomplete="off">
+        </div>
+        <div>
+        <label for="product_desc"> Ürün açıklaması:</label>
+        <textarea name="product_desc" id="product_desc" cols="30" rows="10"  autocomplete="off"></textarea>
+        </div>
+        <div class="image">
+        <label for="product_iamge">Ürün Resmi:</label>
+        <input type="file" accept="image/*" name="product_image" id="product_image" autocomplete="off" onchange="show_preview(event)">
+        <img id='preview_image' src='' alt='Yüklediğiniz resim' />
+        </div>
+        </div>
+        <div class="buttons">
+            <button id="add_product">
+                <img src="..\..\components\images\add.svg" alt="Yeni Ürün Ekle">
+            </button>
+        </div>
 
-
+    </form>
+</section>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="adminmain.js"></script>
+<script src="admin-product-list.js"></script>
 <script>bringproducts()</script>
 </body>
 </html>

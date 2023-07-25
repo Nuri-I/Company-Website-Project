@@ -20,10 +20,15 @@ for ($i=0; $i < $row_count; $i++) {
     $stored = $rows -> fetch_assoc();
     for ($k=0; $k < $col_count; $k++) { 
        
-        $item = $stored["$column_names[$k]"];
+        if ($column_names[$k] == "product_image_url" ) {
+            $item = "<img src = '{$stored[$column_names[$k]]}' style= 'height: 200px;'>";
+        } else {
+        $item = $stored[$column_names[$k]]; }
         $output .= "<td>$item</td>";
     }
+    $output .= "<td> <button type='button' id='{$stored[$column_names[0]]}'> <img src='../components/images/edit.svg' alt= 'edit'></button>  </td>";
     $output .= "</tr>";
+    
 }
 echo $output;
 ?>

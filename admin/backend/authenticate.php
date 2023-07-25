@@ -24,7 +24,7 @@ if (@$stored['pass'] == null || substr(@$stored['pass'], -6) !== @$token['pass']
 };
 
 $showfiles = array('showproducts.php','showadminlist.php','showsitevars.php');
-$accessableFiles = array('editproducts.php', 'editsitevars.php');
+$accessableFiles = array('editproducts.php', 'editsitevars.php', 'getproductmax.php', 'addproduct.php', 'addimg.php');
 $adminFiles = array('editadminlist.php');
 //this variable would include all non-restricted files in a bigger project
 @$directTo =  getallheaders()['ConnectTo'];
