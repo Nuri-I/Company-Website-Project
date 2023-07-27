@@ -5,9 +5,8 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\key;
 include_once "../../components/backend/connectDB.php";
 
-$_POST = json_decode(file_get_contents("php://input"), true);
 
-@$usertoken =  getallheaders()['Authorization'];
+$usertoken =  getallheaders()["Authorization"];
 @$tokenOBJ = JWT::decode($usertoken, new Key('key', 'HS256'));
 //A real program will never have a key this weak
 @$token = (array)$tokenOBJ;
@@ -24,10 +23,10 @@ if (@$stored['pass'] == null || substr(@$stored['pass'], -6) !== @$token['pass']
 };
 
 $showfiles = array('showproducts.php','showadminlist.php','showsitevars.php');
-$accessableFiles = array('editproducts.php', 'editsitevars.php', 'getproductmax.php', 'addproduct.php', 'addimg.php');
+$accessableFiles = array('editproducts.php', 'editsitevars.php', 'newentry.php', 'addproduct.php', 'showproductbools.php');
 $adminFiles = array('editadminlist.php');
 //this variable would include all non-restricted files in a bigger project
-@$directTo =  getallheaders()['ConnectTo'];
+$directTo =  getallheaders()['ConnectTo'];
 if (in_array($directTo, $accessableFiles)){
     $permission = 'granted';
 // in a real program $permission variable would be treated like a key  

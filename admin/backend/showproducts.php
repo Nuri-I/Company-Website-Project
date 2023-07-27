@@ -13,7 +13,7 @@ for ($i=0; $i < $col_count; $i++) {
 }
 $output .= "</tr>";
 
-$rows = $mysqli -> query("SELECT * FROM product_stats");
+$rows = $mysqli -> query("SELECT * FROM product_stats ORDER BY product_id ASC");
 $row_count = $rows -> num_rows;
 for ($i=0; $i < $row_count; $i++) {
     $output .= "<tr>" ;
@@ -24,9 +24,10 @@ for ($i=0; $i < $row_count; $i++) {
             $item = "<img src = '{$stored[$column_names[$k]]}' style= 'height: 200px;'>";
         } else {
         $item = $stored[$column_names[$k]]; }
-        $output .= "<td>$item</td>";
+        $output .= "<td id = '$column_names[$k]_$stored[product_id]'>$item</td>";
     }
-    $output .= "<td> <button type='button' id='{$stored[$column_names[0]]}'> <img src='../components/images/edit.svg' alt= 'edit'></button>  </td>";
+    $output .= "<td> <button type='button' onClick=' edit_product({$stored['product_id']})'> <img src='../components/images/edit.svg' alt= 'edit'></button>
+    <button type='button' onClick='delete_product({$stored['product_id']})'> <img src='../components/images/delete.svg' alt= 'delete'> </button>  </td>";
     $output .= "</tr>";
     
 }

@@ -170,6 +170,8 @@ a{
 }
 
 .form-adjustments{
+    margin-bottom: 50px;
+    margin-top: 30px;
     margin-left: 100px;
     margin-right:100px;
     max-width: 1126px;
@@ -221,14 +223,13 @@ a{
 
 
 #product-page {
-    width: fit-content;
+    width: 100%;
 
 }
 
 #product-page>* {
-    margin: 20px 20px 20px 20px;
     margin-left: 20px;
-    margin-top: 20px;
+
     margin-bottom: 20px;
 }
 #product-body>.vr{
@@ -236,12 +237,16 @@ a{
     margin-bottom: 40px;
 }
 #product-page>.product_row {
-    justify-content: space-between !important;
     padding: 0px;
     margin-left: 1em;
+    height: fit-content;
+    margin-bottom: 0;
+
 }
-#product-page>.product_row >.card{
-    width: 48%;
+#product-page>.product_row >article{
+    max-width:  520px;
+    margin-left: 2em;
+    margin-bottom: 2em;
 }
 
 #choose-list {

@@ -167,7 +167,6 @@ function renderProducts() {
 
 function renderAgainProducts(p) {
   var element = document.querySelector("#product-page");
-  console.log(p)
   element.replaceChildren("") 
   axios({
     method: "POST",
@@ -178,14 +177,10 @@ function renderAgainProducts(p) {
   })
     .then(response => {
       var products = response.data;
-      console.log(products);
       for (var k = 0; k < products.length / 2; k++) {
-        console.log("k = " + k)
         element.innerHTML += "<div class= 'd-flex col-on-mobile product_row w-90-on-mobile' style ='flex-direction: row;'></div>"
         var insert = document.getElementsByClassName("product_row")
         for (var i = 0; i < (products.length - 2 * k < 2 ? products.length - 2 * k : 2); i++) {
-          console.log(response.data)
-          console.log("i = " + i)
           var a = k * 2 + i
           insert[k].innerHTML += products[a]
         }
