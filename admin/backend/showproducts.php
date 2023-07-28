@@ -1,6 +1,5 @@
 <?php 
-include_once "../../components/backend/connectDB.php";
-$cols = $mysqli -> query("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_stats'");
+$cols =  $mysqli -> query("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_stats'");
 $col_count = $cols -> num_rows; 
 
 $column_names = array();
@@ -26,8 +25,8 @@ for ($i=0; $i < $row_count; $i++) {
         $item = $stored[$column_names[$k]]; }
         $output .= "<td id = '$column_names[$k]_$stored[product_id]'>$item</td>";
     }
-    $output .= "<td> <button type='button' onClick=' edit_product({$stored['product_id']})'> <img src='../components/images/edit.svg' alt= 'edit'></button>
-    <button type='button' onClick='delete_product({$stored['product_id']})'> <img src='../components/images/delete.svg' alt= 'delete'> </button>  </td>";
+    $output .= "<td> <button type='button' onClick=' edit_product({$stored['product_id']}, event)'> <img src='../components/images/edit.svg' alt= 'edit'></button>
+    <button type='button' onClick='delete_product({$stored['product_id']}, event)'> <img src='../components/images/delete.svg' alt= 'delete'> </button>  </td>";
     $output .= "</tr>";
     
 }

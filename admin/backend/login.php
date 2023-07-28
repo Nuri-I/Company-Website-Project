@@ -7,7 +7,6 @@ include_once "../../components/backend/connectDB.php";
 $_POST = json_decode(file_get_contents("php://input"), true);
 @$password = $_POST['password'];
 @$username = $_POST['username'];
-//Handle if input is empty or can not be recieved, may be taken out soon with changes to front end code
 if (!$_POST){
     $response = [
         'message' => "Unable to retrieve credentials"];
