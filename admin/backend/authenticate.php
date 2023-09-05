@@ -4,7 +4,6 @@ require_once "./firebase-jwt/key.php";
 use Firebase\JWT\JWT;
 use Firebase\JWT\key;
 include_once "../../components/backend/connectDB.php";
-
 if (!isset(getallheaders()["Authorization"])) {
     throw new Exception("no Authorization in header");
 }
@@ -30,7 +29,7 @@ if (@$stored['pass'] == null || substr(@$stored['pass'], -6) !== @$token['pass']
 };
 
 $showfiles = array('showproducts.php','showadminlist.php','showsitevars.php');
-$accessableFiles = array('readyproductedit.php', 'editsitevars.php', 'newentry.php', 'addproduct.php', 'showproductbools.php');
+$accessableFiles = array('readyproductedit.php', 'editsitevars.php', 'newproductentry.php', 'addproduct.php', 'showproductbools.php', 'editproduct.php', 'deleteproduct.php');
 $adminFiles = array('editadminlist.php');
 //this variable would include all non-restricted files in a bigger project
 $directTo =  getallheaders()['ConnectTo'];
@@ -52,6 +51,6 @@ if (in_array($directTo, $accessableFiles) && $stored['permission'] >= 1){
     include($directTo);
     exit();
 } else {
-    die("you are not authorised");
+    die($stored['permission']);
 };
 ?>

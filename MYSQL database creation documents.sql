@@ -44,7 +44,7 @@ SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'company
 INSERT INTO company_website.users (id, username, pass, permission)
 VALUES (1,"admin", '$2y$10$BbgVXNm3mn3eHkMFLQKyGe5JcLSV72iIOL7cIq1iYu1rUlZi2M2Jy', 1);
 
-SELECT * FROM product_stats ORDER BY 'product_id' DESC;
+SELECT * FROM product_stats ORDER BY product_id;
 INSERT INTO company_website.site_vars (Email, Phone, adress)
 VALUES ("An Email", "A phone", "An Adress");
     
@@ -82,3 +82,17 @@ INSERT INTO product_bools (product_id, odd, even, red, blue)
 VALUES (7 , true, false, false ,true);
 INSERT INTO product_bools (product_id, odd, even, red, blue)
 VALUES (8 , false, true, false ,true);
+
+Select * from product_bools;
+
+
+
+SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_bools';
+
+SELECT COLUMN_NAME
+  FROM INFORMATION_SCHEMA.COLUMNS
+  WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_bools';
+  
+  
+  
+  UPDATE product_bools SET  red = true WHERE product_id = 12
