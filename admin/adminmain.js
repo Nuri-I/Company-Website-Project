@@ -9,7 +9,7 @@ function bringadminlist(){
             'Authorization': sessionStorage.getItem('token'),
             'ConnectTo': 'showadminlist.php'
         },
-        url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php"
+        url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php"
     }) .then (response => {
             document.querySelector("table").innerHTML = response.data            
 
@@ -22,7 +22,7 @@ function bringsitevars(){
             'Authorization': sessionStorage.getItem('token'),
             'ConnectTo': 'showsitevars.php'
         },
-        url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php"
+        url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php"
     }) .then (response => {
             document.querySelector("table").innerHTML = response.data            
 

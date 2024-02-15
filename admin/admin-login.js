@@ -9,7 +9,7 @@ submit.addEventListener('click', e =>{
 
     axios ({
         method: "post",
-        url: "http://localhost:8080/admin-panel-project/admin/backend/login.php",
+        url: "http://localhost:80/Company-Website-Project/admin/backend/login.php",
         data: {
             'username': username,
             'password': password

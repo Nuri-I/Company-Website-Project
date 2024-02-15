@@ -9,7 +9,7 @@ axios ({
         'Authorization': sessionStorage.getItem('token'),
         'ConnectTo': 'showproducts.php'
     },
-    url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php"
+    url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php"
 }) .then (response => {
         document.querySelector("table").innerHTML = response.data            
 
@@ -23,7 +23,7 @@ axios ({
         'Authorization': sessionStorage.getItem('token'),
         'ConnectTo': 'showproductbools.php'
     },
-    url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php"
+    url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php"
 }) .then (response => {
         document.querySelector("#bools").innerHTML = response.data            
 
@@ -59,7 +59,7 @@ function new_product(e) {
             'Authorization' : sessionStorage.getItem('token'),
             'ConnectTo': 'newproductentry.php'
         },
-        url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php"
+        url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php"
     }) .then(response => {
         reset_form_completely();
         newProductID = response.data.product_id
@@ -88,7 +88,7 @@ function send_new_product(e) {
             enctype: "multipart/form-data"
         },
         data: dataToSend,
-        url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php"
+        url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php"
     }) .then(response => { 
         renew_products()
         reset_form_completely()
@@ -111,7 +111,7 @@ function edit_product(id, e) {
         data: {
             'product_id': id
         },
-        url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php",
+        url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php",
     }).then( response => {
         document.querySelector("#productId").value = response.data.product_id
         document.querySelector("#productName").value = response.data.product_name
@@ -153,7 +153,7 @@ axios({
         'ConnectTo': 'editproduct.php',
     },
     data: dataToSend,
-    url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php",
+    url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php",
 }).then (response => {
     renew_products()
     reset_form_completely()
@@ -171,7 +171,7 @@ function delete_product(id,e){
                 'ConnectTo': 'deleteproduct.php',
             },
             data: {'product_id': id},
-            url: "http://localhost:8080/admin-panel-project/admin/backend/authenticate.php",
+            url: "http://localhost:80/Company-Website-Project/admin/backend/authenticate.php",
         }).then (response => {
             renew_products()
         })

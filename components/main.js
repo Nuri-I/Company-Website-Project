@@ -28,7 +28,7 @@ if (form) {
     let message = form.querySelector('#message');
     axios({
       method: "post",
-      url: "http://localhost:8080/admin-panel-project/components/backend/submitForm.php",
+      url: "http://localhost:80/Company-Website-Project/components/backend/submitForm.php",
       data: {
         'name': name.value,
         'email': email.value,
@@ -108,7 +108,7 @@ function renderSiteVars() {
   var site_adresses = document.getElementsByClassName("insert-main-adress");
   axios({
     method: "GET",
-    url: "http://localhost:8080/admin-panel-project/components/backend/geteverything.php"
+    url: "http://localhost:80/Company-Website-Project/components/backend/geteverything.php"
   })
     .then(response => {
       for (var i = 0; i < site_mails.length;) {
@@ -134,7 +134,7 @@ function renderProducts() {
   var element = document.getElementById("product-page");
   axios({
     method: "get",
-    url: "http://localhost:8080/admin-panel-project/components/backend/getProductList.php",
+    url: "http://localhost:80/Company-Website-Project/components/backend/getProductList.php",
   })
     .then(response => {
       var products = response.data;
@@ -152,7 +152,7 @@ function renderProducts() {
 
   axios({
     method: "get",
-    url: "http://localhost:8080/admin-panel-project/components/backend/getProductSpesifics.php",
+    url: "http://localhost:80/Company-Website-Project/components/backend/getProductSpesifics.php",
   })
     .then(response => {
       var element_specs = document.getElementById("choose-list");
@@ -170,7 +170,7 @@ function renderAgainProducts(p) {
   element.replaceChildren("") 
   axios({
     method: "POST",
-    url: "http://localhost:8080/admin-panel-project/components/backend/adjustProducts.php",
+    url: "http://localhost:80/Company-Website-Project/components/backend/adjustProducts.php",
     data: {
       'adjusting': p
     }

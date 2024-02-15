@@ -42,57 +42,42 @@ CREATE TABLE company_website.usermessages (
 SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_stats';
 
 INSERT INTO company_website.users (id, username, pass, permission)
-VALUES (1,"admin", '$2y$10$BbgVXNm3mn3eHkMFLQKyGe5JcLSV72iIOL7cIq1iYu1rUlZi2M2Jy', 1);
+VALUES (1,"admin", '$2y$10$BbgVXNm3mn3eHkMFLQKyGe5JcLSV72iIOL7cIq1iYu1rUlZi2M2Jy', 2);
 
-SELECT * FROM product_stats ORDER BY product_id;
 INSERT INTO company_website.site_vars (Email, Phone, adress)
 VALUES ("An Email", "A phone", "An Adress");
     
-    
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+# Test products, do not  run while setting up the DB for a real project
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (1 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"red 1" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (2 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"red 2" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (3 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"red 3" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (4 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"red 4" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (5 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"blue 1" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (6 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"blue 2" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (7 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"blue 3" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
-INSERT INTO product_stats (product_id, product_image_url, product_name, product_description)
+INSERT INTO company_website.product_stats (product_id, product_image_url, product_name, product_description)
 VALUES (8 , "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" ,"blue 4" , "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio modi natus iusto id maxime cumque excepturi odio quisquam unde re Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae aperiam nesciunt omnis debitis nisi libero fugiat neque possimus suscipit iusto error quidem, et, commodi quae iste aut dicta voluptatum sint.");
 
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (1 , true, false, true, false);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (2 , false, true, true, false);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (3 , true, false, true , false);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (4 , false, true, true , false);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (5 , true, false, false ,true);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (6 , false, true, false ,true);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (7 , true, false, false ,true);
-INSERT INTO product_bools (product_id, odd, even, red, blue)
+INSERT INTO company_website.product_bools (product_id, odd, even, red, blue)
 VALUES (8 , false, true, false ,true);
-
-Select * from product_bools;
-
-
-
-SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_bools';
-
-SELECT COLUMN_NAME
-  FROM INFORMATION_SCHEMA.COLUMNS
-  WHERE TABLE_SCHEMA = 'company_website' AND TABLE_NAME = 'product_bools';
-  
-  
-  
-  UPDATE product_bools SET  red = true WHERE product_id = 12

@@ -1,4 +1,5 @@
 <?php 
+
 require_once "./firebase-jwt/JWT.php";
 require_once "./firebase-jwt/key.php";
 use Firebase\JWT\JWT;
